@@ -27,6 +27,7 @@ body{
 .main__text{
     color: var(--secondory-color);
     font-family: var(--main-font);
+    margin-left: 10px;
 }
 
 .main__text h1{

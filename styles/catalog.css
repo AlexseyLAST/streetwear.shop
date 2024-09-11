@@ -8,18 +8,20 @@
     color: var(--secondory-color);
     font-size: 30px;
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .catalog__blocks{
+    width: 100%;
     color: var(--secondory-color);
     display: flex;
     flex-wrap: wrap;
 }
 
 .catalog__block{
-    display: flex;
-    justify-content: center;
-    padding-left: 50px;
+    display: block;
+    padding-left: 30px;
+    padding-bottom: 40px;
 }
 
 .catalog__block img{
