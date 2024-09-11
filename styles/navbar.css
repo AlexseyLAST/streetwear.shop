@@ -16,8 +16,9 @@
 
 .main__logo{
     margin-left: 10px;
-    font-weight: 700;
-    font-size: 32px;
+    font-family: var(--secondory-font);
+    font-weight: 400;
+    font-size: 30px;
     line-height: 42px;
     color: var(--secondory-color);
 }
@@ -79,7 +80,7 @@
 
     .nav__menu.active{
         position: fixed;
-        top: 25%;
+        top: 18%;
     }
 
     .nav__link{
@@ -146,6 +147,13 @@
     .burger.active span{
         transform: scale(0);
     }
+}
+
+@media (max-width: 768px){
+    .nav__menu.active{
+        top: 16%;
+    }
+
 }
 
 @media (max-width: 330px){
