@@ -1,0 +1,69 @@
+@import url(container.css);
+@import url(fonts.css);
+@import url(navbar.css);
+@import url(catalog.css);
+@import url(footer.css);
+
+:root {
+    --main-color: #151515;
+    --secondory-color: #ffffff;
+    --main-font: 'Helvetica';
+  }
+   
+
+body{
+    width: 100%;
+    background-color: var(--main-color);
+}
+
+.link{
+    text-decoration: none;
+}
+
+.main{
+    width: 100%;
+}
+
+.main__text{
+    color: var(--secondory-color);
+    font-family: var(--main-font);
+}
+
+.main__text h1{
+    font-size: 60px;
+    padding-bottom: 10px;
+}
+
+.main__text p{
+    font-size: 20px;
+}
+
+@media (max-width: 768px){
+    .main{
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px){
+    .main__text h1{
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+    
+    .main__text p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 375px){
+    .main__text h1{
+        font-size: 35px;
+        padding-bottom: 10px;
+    }
+    
+    .main__text p{
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 15px;
+    }
+}
