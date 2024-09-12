@@ -1,0 +1,23 @@
+.dostavka{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--secondory-color);
+    font-family: var(--main-font);
+}
+
+.dostavka__rull{
+    width: 800px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.dostavka__rull h1{
+    font-size: 35px;
+}
+
+.dostavka__rull p{
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

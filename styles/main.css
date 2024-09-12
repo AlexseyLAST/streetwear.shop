@@ -3,10 +3,15 @@
 @import url(navbar.css);
 @import url(catalog.css);
 @import url(footer.css);
+@import url(rulls.css);
+@import url(contacts.css);
+@import url(dostavka.css);
+
 
 :root {
     --main-color: #151515;
     --secondory-color: #ffffff;
+    --akcent-color: #e604ee;
     --main-font: 'Helvetica';
     --secondory-font: 'Y2K'
   }

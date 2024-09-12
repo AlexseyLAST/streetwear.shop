@@ -1,0 +1,23 @@
+.rulls{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--secondory-color);
+    font-family: var(--main-font);
+}
+
+.rull{
+    width: 800px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.rull h1{
+    font-size: 35px;
+}
+
+.rull p{
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

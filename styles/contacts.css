@@ -1,0 +1,40 @@
+.contacts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 25%;
+    color: var(--secondory-color);
+    font-family: var(--main-font);
+}
+
+.contact{
+    text-align: center;
+}
+
+.contact h1{
+    font-size: 35px;
+    padding-bottom: 25px;
+}
+
+.contact a{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 21px;
+    opacity: 1;
+    transition: all 0.2s;
+    color: var(--secondory-color);
+}
+
+.contact a:hover{
+    border-bottom: 1px solid var(--secondory-color);
+}
+
+.contact p{
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.contact-active{
+    color: var(--akcent-color);
+}

@@ -23,9 +23,13 @@
     padding-left: 30px;
     padding-bottom: 40px;
 }
-
 .catalog__block img{
     width: 100%;
+}
+
+.catalog__block:hover{
+    opacity: 0.6;
+    transition: all 0.4s;
 }
 
 .block__info{
