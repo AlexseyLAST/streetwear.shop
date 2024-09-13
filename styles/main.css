@@ -3,15 +3,13 @@
 @import url(navbar.css);
 @import url(catalog.css);
 @import url(footer.css);
-@import url(rulls.css);
-@import url(contacts.css);
-@import url(dostavka.css);
-
+@import url(information.css);
+@import url(products.css);
 
 :root {
     --main-color: #151515;
     --secondory-color: #ffffff;
-    --akcent-color: #e604ee;
+    --background-card: #1f1e1e;
     --main-font: 'Helvetica';
     --secondory-font: 'Y2K'
   }
@@ -33,7 +31,8 @@ body{
 .main__text{
     color: var(--secondory-color);
     font-family: var(--main-font);
-    margin-left: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .main__text h1{
@@ -49,11 +48,26 @@ body{
     .main{
         text-align: center;
     }
+
+    .main__text{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .main__text p{
+        font-size: 15px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .main__text h1{
+        font-size: 40px;
+    }
+    
 }
 
 @media (max-width: 425px){
     .main__text h1{
-        font-size: 40px;
         padding-bottom: 10px;
     }
     
@@ -64,7 +78,7 @@ body{
 
 @media (max-width: 375px){
     .main__text h1{
-        font-size: 35px;
+        font-size: 30px;
         padding-bottom: 10px;
     }
     
