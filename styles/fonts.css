@@ -1,17 +1,17 @@
 @font-face {
     font-family: Helvetica;
     font-weight: 700;
-    src: url(../fonts/helvetica_bold.otf);
+    src: url(/fonts/helvetica_bold.otf);
 }
 
 @font-face {
     font-family: Helvetica;
     font-weight: 400;
-    src: url(../fonts/helvetica_regular.otf);
+    src: url(/fonts/helvetica_regular.otf);
 }
 
 @font-face {
     font-family: Y2K;
     font-weight: 400;
-    src: url(../fonts/Y2K.ttf);
+    src: url(/fonts/Y2K.ttf);
 }
