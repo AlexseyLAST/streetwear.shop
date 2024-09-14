@@ -21,7 +21,6 @@
 
 html{
     height: 100%;
-    overflow: hidden;
 }
 
 body{
@@ -33,7 +32,6 @@ body{
     margin: 0;
     background-color: var(--main-color);
     font-family: var(--main-font);
-    overflow: hidden;
 }
 
 .container{
