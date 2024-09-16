@@ -1,0 +1,153 @@
+.header{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: var(--background-card);
+}
+
+.navbar{
+    width: 100%;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__logo{
+    font-size: 30px;
+    margin-left: 10px;
+    font-family: var(--secondory-font);
+    color: var(--secondory-color);
+}
+
+.burger{
+    display: none;
+    margin-right: 10px;
+}
+
+.nav__menu{
+    margin-top: 5px;
+    margin-right: 10px;
+    display: flex;
+    z-index: 100;
+}
+
+.nav__link{
+    list-style: none;
+    margin-left: 24px;
+}
+
+.nav__link .link{
+    font-size: 18px;
+    opacity: 0.7;
+    transition: all 0.2s;
+    color: var(--secondory-color);
+}
+
+.nav__link .link:hover{
+    opacity: 1;
+}
+
+.nav__link .link.active{
+    opacity: 2;
+}
+
+@media (max-width: 800px){
+    .nav__menu{
+        z-index: 90;
+        position: fixed;
+        display: block;
+        width: 40%;
+        height: 100%;
+        left: -120%;
+        transition: all 0.5s ease 0s;
+        background-color: var(--background-card);
+    }
+
+    .nav__menu.active{
+        position: fixed;
+        left: 0px;
+        top: 0;
+        margin: 0;
+    }
+
+    .nav__link{
+        width: 100%;
+        height: 50px;
+        padding-top: 50px;
+        padding-left: 50px;
+        margin-top: 25px;
+    }
+
+    .burger{
+        z-index: 100;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        margin-top: 5px;
+    }
+
+    .burger.active{
+        position: fixed;
+        left: 20px;
+        top: 20px;
+    }
+
+    .burger:before,
+    .burger:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+        background-color: var(--secondory-color);
+    }
+    .burger:before{
+        top: 0;
+    }
+    .burger:after{
+        bottom: 0;
+    }
+    .burger span{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+        background-color: var(--secondory-color);
+    }
+
+    .burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+
+    }
+
+    .burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+
+    }
+    .burger.active span{
+        transform: scale(0);
+    }
+}
+
+@media (max-width: 525px){
+    .nav__menu{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 425px){
+    .main__logo{
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 330px){
+
+}
