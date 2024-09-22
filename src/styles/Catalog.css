@@ -6,57 +6,57 @@
     margin-bottom: 25px;
 }
 
-.catalog__blocks {
+.catalog__cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 20px; 
 }
 
-.catalog__block {
+.catalog__card {
     background-color: var(--secondory-color);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.catalog__block img {
+.catalog__card img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-.block__info {
+.card__info {
     padding: 15px;
     text-align: center;
 }
 
-.block__info h3 {
+.card__info h3 {
     font-size: 18px;
     color: var(--main-color);
     margin-bottom: 5px;
 }
 
-.block__info h4 {
+.card__info h4 {
     font-size: 16px;
     color: var(--main-color);
 }
 
-.catalog__block:hover {
+.catalog__card:hover {
     transform: translateY(-10px);
 }
 
 
 @media (max-width: 768px) {
-    .catalog__blocks {
+    .catalog__cards {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
         gap: 15px;
     }
 
-    .block__info h3 {
+    .card__info h3 {
         font-size: 16px;
     }
 
-    .block__info h4 {
+    .card__info h4 {
         font-size: 14px;
     }
 }

@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
-import productImage1 from '../images/image-1.png'; 
+import React from 'react';
+import { useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import closeIcon from '../images/icon/Close.svg'; 
 import whatsappIcon from '../images/icon/WhatsApp.svg'; 
 import telegramIcon from '../images/icon/Telegram.svg'; 
+import LoadingProducts from './LoadingProducts';
+import Error from './Error';
 
 const ProductsCards = () => {
 
@@ -14,21 +18,59 @@ const ProductsCards = () => {
     setIsModalActive(false);
   };
 
+  const{id} = useParams();
+  const [card, setCard] = useState({});
+  const  [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false)
+
+  useEffect(() => {
+    async function fetchCard() {
+      try {
+        setIsLoading(true);
+        const response = await axios.get(`https://bc100de5414e264e.mokky.dev/cards/${id}`);
+        setCard(response.data);
+      } catch (error) {
+        setIsError(true)
+        console.log(error)
+      } finally{
+        setIsLoading(false);
+    }
+    }
+    fetchCard();
+  }, [id]);
+
+  if (isError) {
+    return <Error />
+}
+
+
   return (
     <section className="products">
       <div className="container">
-        <div className="product">
-          <div className="product__img">
-            <img src={productImage1} alt="wear-png" />
-          </div>
+      {isLoading ? (<LoadingProducts />) : (
+        <>
+          <div className="product">
+            <div className="product__img">
+              <img src={card.image} alt={card.name} />
+            </div>
           
-          <div className="product__info">
-            <h1>Zip рубашка - EMOTIONAL CLOSET</h1>
-            <h3>10000₸</h3>
-            <h4>Артикул: 001</h4>
-            <button className="product-btn" onClick={openModal}>Заказать</button>
-          </div>
-        </div>
+            <div className="product__info">
+              <h1>{card.name}</h1>
+              <h3>{card.price}</h3>
+              <h4>Артикул: {card.id}</h4>
+              <button className="product-btn" onClick={openModal}>Заказать</button>
+            </div>
+          </div> 
+
+          <section className="product__description">
+            <div className="container">
+              <div className="description">
+                <p>{card.description}</p>
+              </div>
+            </div>
+          </section>
+        </>
+        )}
       </div>
 
       <div className={`modal__order-window ${isModalActive ? 'active' : ''}`}>

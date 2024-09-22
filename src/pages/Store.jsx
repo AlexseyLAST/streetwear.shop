@@ -1,11 +1,11 @@
 import Banner from "../components/Banner";
-import Catalog from "../components/Catalog";
+import CatalogCardsList from "../components/CatalogCardsList";
 
 function Store() {
     return (
         <>
             <Banner />
-            <Catalog />
+            <CatalogCardsList />
         </>
     );
 }
